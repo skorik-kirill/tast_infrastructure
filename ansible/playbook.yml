@@ -1,0 +1,27 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: Install nginx
+      dnf:
+        name: nginx
+        state: latest
+    - name: Restart Nginx
+      service:
+        name: nginx
+        state: restarted
+    - name: Clone application code to host
+      git:
+        repo: https://github.com/skorik-kirill/test_task.git
+        dest: /tmp/application
+        update: yes
+        force: yes
+    - name: install pip
+      dnf:
+        name: pip
+        state: latest
+      become: true
+    - name: copy nginx config 
+      copy:
+        src: /home/kyrylo/Python/test_task/ansible/nginx.conf
+        dest: /etc/nginx/nginx.conf
