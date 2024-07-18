@@ -38,6 +38,8 @@ resource "local_file" "playbook" {
       copy:
         src: /home/kyrylo/Python/test_task/ansible/nginx.conf
         dest: /etc/nginx/nginx.conf
+    - name: run script
+      shell: nohup python3 /tmp/application/main.py &
     EOT
     filename = "ansible/playbook.yml"
 
