@@ -48,7 +48,7 @@ to 127.0.0.1:5000 where is running application.
 ```
 server {
         listen       80;
-        server_name 54.197.218.16;
+        server_name <REMOTE HOST IT ADDRESS>;
         location / {
                 proxy_pass http://127.0.0.1:5000;
         }
