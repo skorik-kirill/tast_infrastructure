@@ -1,7 +1,7 @@
 resource "local_file" "inventory" {
   content = <<-EOT
 [server]
-54.197.218.16 ansible_user=ec2-user
+3.90.149.196 ansible_user=ec2-user
 
 [server:vars]
 ansible_user=ec2-user
@@ -36,7 +36,7 @@ resource "local_file" "playbook" {
       become: true
     - name: copy nginx config 
       copy:
-        src: /home/kyrylo/Python/test_task/ansible/nginx.conf
+        src: /home/kyrylo/Python/test_task/nginx_conf/nginx.conf
         dest: /etc/nginx/nginx.conf
     - name: run script
       shell: nohup python3 /tmp/application/main.py &
