@@ -1,7 +1,7 @@
 resource "local_file" "inventory" {
   content = <<-EOT
 [server]
-3.90.149.196 ansible_user=ec2-user
+<REMOTE HOST IT ADDRESS> ansible_user=ec2-user
 
 [server:vars]
 ansible_user=ec2-user
