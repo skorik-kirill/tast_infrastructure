@@ -1,5 +1,0 @@
-[server]
-54.197.218.16 ansible_user=ec2-user
-
-[server:vars]
-ansible_user=ec2-user
