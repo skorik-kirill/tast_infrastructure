@@ -26,7 +26,7 @@ For execute terraform clone repo with file to local host
 Two folders created `/ansible` and `/terraform`. All configuration locate in `/terraform/main.tf` file
 Change IP address of destination host, username who has access via ssh to remote host  in `main.tf` file
 Optional IP address of remote host on local machine in default inventory `/etc/ansible/hosts`.
-Application locate in [](https://github.com/skorik-kirill/test_task.git) git repo.
+Application locate in [https://github.com/skorik-kirill/test_task.git] git repo.
 When all changes applied, `main.tf` ready to execute
 
 `main.tf` containt two resource creation:
